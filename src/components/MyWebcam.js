@@ -30,7 +30,7 @@ class MyWebcam extends React.Component {
 
     fetchData = (byteArray) => {
         const apiKey = '0db3e634a4254ef2bb84a73bfeb0fb21';
-        const apiEndpoint = 'https://westus2.api.cognitive.microsoft.com/face/v1.0'
+        const apiEndpoint = 'https://westus2.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceAttributes=emotion'
         fetch(apiEndpoint, {
             body: byteArray,
             headers: {
