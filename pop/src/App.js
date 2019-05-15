@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import './components/stylesheet.css'
+import Displayer from './components/Displayer'
+import Title from './components/Title'
+import AddVideo from './components/AddVideo'
+import EmotionAnlysis from './components/EmotionAnalysis'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    constructor() {
+        super()
+        this.state = {
+            posts: [{
+                videoLink: ""
+            }]
+        }
+    }
+
+    addVideo(postSubmitted) {
+        this.setState(state => ({
+            posts: [postSubmitted]
+        }))
+    }
+
+    render() {
+        return (<div>
+            <Title title={'No-Laugh Challenge'} />
+
+            <AddVideo onAddVideo={(addedPost) => {
+                this.addVideo(addedPost)
+            }} />
+            <div className="video-wrapper">
+                <Displayer posts={this.state.posts} />
+            </div>
+            <h1><EmotionAnlysis /></h1>
+        </div>
+        )
+    }
 }
 
 export default App;
