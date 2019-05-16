@@ -25,7 +25,7 @@ class App extends Component {
     render() {
         return (<div>
             <Title title={'Surprise Detector'} />
-            <Explainer explainer={'Enter the link to a video that should cause you surprise. Then, press Start Game! and to measure your level of suprise.'} />
+            <Explainer explainer={'Enter the link to a video that should cause you surprise. Then, press Start Game! to measure your actual level of suprise.'} />
             <AddVideo onAddVideo={(addedPost) => {
                 this.addVideo(addedPost)
             }} />
