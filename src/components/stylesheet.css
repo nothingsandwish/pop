@@ -5,8 +5,8 @@
   
 .video-wrapper {
     position: relative;
-    padding-bottom: 10%;
-    padding-top: 10px; 
+    padding-bottom: 50%;
+    padding-top: 25px; 
     height: 0; 
     border: 1px solid #d3d3d3;
     overflow: hidden;
