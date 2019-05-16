@@ -40,10 +40,10 @@ class MyWebcam extends React.Component {
         }).then(response => {
             if (response.ok) {
                 response.json().then(data => {
-                    var happiness = (data[0] != null ? data[0].faceAttributes.emotion.happiness : 0);
-                    happiness = (Math.round(happiness * 100))
-                    if (this.isCapturing && happiness < 100) {
-                        this.props.onReceivedResult(happiness);
+                    var surprise = (data[0] != null ? data[0].faceAttributes.emotion.surprise : 0);
+                    surprise = (Math.round(surprise * 100))
+                    if (this.isCapturing && surprise < 100) {
+                        this.props.onReceivedResult(surprise);
                     } else {
                         clearInterval(this.timerId);
                         this.isCapturing = false;
