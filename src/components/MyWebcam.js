@@ -56,8 +56,8 @@ class MyWebcam extends React.Component {
 
     render() {
         const videoConstraints = {
-            width: 750,
-            height: 500,
+            width: 650,
+            height: 400,
             facingMode: "user"
         };
         return (
@@ -65,8 +65,8 @@ class MyWebcam extends React.Component {
                 <div>
                     <Webcam
                         audio={false}
-                        height={250}
-                        width={375}
+                        height={350}
+                        width={475}
                         ref={this.setRef}
                         screenshotFormat="image/jpeg"
                         videoConstraints={videoConstraints}
