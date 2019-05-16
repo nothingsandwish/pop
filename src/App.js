@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './components/stylesheet.css'
 import Displayer from './components/Displayer'
 import Title from './components/Title'
+import Explainer from './components/Explainer'
 import AddVideo from './components/AddVideo'
 import EmotionAnlysis from './components/EmotionAnalysis'
 
@@ -24,7 +25,7 @@ class App extends Component {
     render() {
         return (<div>
             <Title title={'Surprise Detector'} />
-
+            <Explainer explainer={'Enter the link to a video, and press Start Game when you are ready to be surprised.'} />
             <AddVideo onAddVideo={(addedPost) => {
                 this.addVideo(addedPost)
             }} />
